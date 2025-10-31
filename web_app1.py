@@ -283,7 +283,7 @@ def main():
 
     st.markdown(f"<h1><img src='{ICONS['app_logo']}' class='main-logo'/> Ked.AI - Smart Assistant</h1>", unsafe_allow_html=True)
 
-    menu = st.sidebar.radio("🧭 Navigasi", ["Chatbot", "Py Assist"])
+    menu = st.sidebar.radio(":// Navigasi", ["Chatbot", "Py Assist"])
 
     if "history" not in st.session_state:
         st.session_state.history = load_chat_history()
