@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  sandbox:
+    build: .
+    container_name: py_sandbox
+    environment:
+      - SANDBOX_TOKEN=super-secret-token-123
+    ports:
+      # Hanya expose ke localhost (0.0.0.0:5001) — jangan open ke public tanpa proteksi
+      - "127.0.0.1:5001:5001"
+    restart: unless-stopped
+    # Membatasi resource (opsional, tapi direkomendasikan)
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 256M
