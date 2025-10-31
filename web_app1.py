@@ -146,9 +146,8 @@ def load_chat_history():
 
 def setup_gemini_client():
     if "client" not in st.session_state:
-        st.session_state.client = genai.Client(
-            api_key="AIzaSyBQD0brSlNEnQmdAKbzcxo_cxrjc0-Gc4U"
-        )
+        genai.configure(api_key="AIzaSyBQD0brSlNEnQmdAKbzcxo_cxrjc0-Gc4U")
+        st.session_state.client = genai  # langsung simpan modulnya saja
 
 
 def get_chatbot_session(client):
