@@ -1,6 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
-from google.genai.errors import APIError
+from google.generativeai.errors import APIError
 import os
 import json
 import PIL.Image
