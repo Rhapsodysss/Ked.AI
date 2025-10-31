@@ -167,7 +167,7 @@ def main():
     st.markdown(f"<h1><img src='{ICONS['app_logo']}' width='56'/> Ked.AI - Smart Assistant</h1>", unsafe_allow_html=True)
 
     st.sidebar.markdown("### 👤 Masukkan Identitas")
-    username = st.sidebar.text_input("Nama / ID Anda:", key="username", placeholder="misal: ahza")
+    username = st.sidebar.text_input("Nama / ID Anda:", key="username")
     if not username:
         st.warning("⚠️ Masukkan nama Anda di sidebar untuk memulai.")
         return
