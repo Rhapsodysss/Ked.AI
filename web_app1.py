@@ -1,6 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
-from google.generativeai.errors import APIError
+from google.api_core.exceptions import GoogleAPIError
 import os
 import json
 import PIL.Image
@@ -277,7 +277,7 @@ def process_chat(client, chat_session, prompt):
                 {"role": "model", "parts": [{"text": answer}]})
             save_chat_history(st.session_state.history)
 
-        except APIError as e:
+        except GoogleAPIError as e:
             st.error(f"API Error: {e}")
         except Exception as e:
             st.error(f"Error: {e}")
