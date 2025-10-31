@@ -221,7 +221,7 @@ def main():
 
     # input username
     st.sidebar.markdown("### 👤 Masukkan Identitas")
-    username = st.sidebar.text_input("Nama / ID Anda:", key="username", placeholder="misal: ahza")
+    username = st.sidebar.text_input("Nama / ID Anda:", key="username")
     if not username:
         st.warning("⚠️ Masukkan nama Anda di sidebar untuk memulai.")
         return
